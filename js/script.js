@@ -1,10 +1,4 @@
-/* =========================================
-   STUDENTHUB
-   Main JavaScript
-========================================= */
-
 "use strict";
-
 
 /* =========================================
    1. DOM ELEMENTS
@@ -13,6 +7,8 @@
 const mobileMenu = document.querySelector("#mobileMenu");
 const sidebar = document.querySelector(".sidebar");
 const themeToggle = document.querySelector(".theme-toggle");
+
+const taskCheckboxes = document.querySelectorAll(".task-checkbox");
 
 
 /* =========================================
@@ -30,32 +26,70 @@ function init() {
 
     console.log("StudentHub is running 🚀");
 
-}
+    loadTasks();
 
+}
 init();
-let darkMode=false;
 /* =========================================
-   4. DARK MODE
+   TASK MANAGEMENT
 ========================================= */
 
-function toggleDarkMode() {
+function saveTasks() {
 
-    darkMode = !darkMode;
+    const tasks = [];
 
-    document.body.classList.toggle("dark-mode");
-/* =========================================
-   5. MOBILE SIDEBAR
-========================================= */
+    taskCheckboxes.forEach(function(checkbox) {
 
-function toggleSidebar() {
+        tasks.push(checkbox.checked);
 
-    sidebar.classList.toggle("mobile-open");
+    });
 
+    localStorage.setItem(
+        "studenthubTasks",
+        JSON.stringify(tasks)
+    );
 }
+taskCheckboxes.forEach(function(checkbox) {
 
-mobileMenu.addEventListener("click", toggleSidebar);
+    checkbox.addEventListener("change", function() {
 
+        const taskText = checkbox
+            .parentElement
+            .querySelector("span");
+
+        taskText.classList.toggle(
+            "completed",
+            checkbox.checked
+        );
+
+        saveTasks();
+
+    });
+
+});
+function loadTasks() {
+
+    const savedTasks =
+        JSON.parse(
+            localStorage.getItem("studenthubTasks")
+        );
+
+    if (!savedTasks) {
+        return;
+    }
+
+    taskCheckboxes.forEach(function(checkbox, index) {
+
+        checkbox.checked = savedTasks[index];
+
+        const taskText = checkbox
+            .parentElement
+            .querySelector("span");
+
+        taskText.classList.toggle(
+            "completed",
+            checkbox.checked
+        );
+
+    });
 }
-
-themeToggle.addEventListener("click", toggleDarkMode);
-
