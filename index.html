@@ -1,29 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>StudentHub</title>
+    <meta name="description"
+        content="StudentHub - A modern student dashboard for managing modules, tasks and exams.">
+
+    <title>StudentHub | Student Dashboard</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>StudentHub</h1>
-        <p>Your personal student dashboard</p>
-    </header>
+    <div class="app">
 
-    <main>
-        <section>
-            <h2>Welcome to StudentHub 👋</h2>
-            <p>Manage your modules, tasks, exams and progress.</p>
-        </section>
-    </main>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">StudentHub</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-title">MENU</p>
+
+                <a href="#" class="nav-link active">
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>📚</span>
+                    <span>Modules</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>✅</span>
+                    <span>Tasks</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>📝</span>
+                    <span>Exams</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>📊</span>
+                    <span>Progress</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+                <button class="theme-toggle">
+                    <span>🌙</span>
+                    <span>Dark Mode</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <button class="mobile-menu" id="mobileMenu">
+                    ☰
+                </button>
+
+                <div class="welcome">
+                    <p class="welcome-small">Welcome back</p>
+                    <h1>Good evening, Mohamed 👋</h1>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button class="icon-button">
+                        🔔
+                    </button>
+
+                    <div class="profile">
+                        <div class="avatar">M</div>
+
+                        <div class="profile-info">
+                            <strong>Mohamed</strong>
+                            <span>Student</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD -->
+            <section class="dashboard">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="section-label">OVERVIEW</p>
+                        <h2>Your Study Dashboard</h2>
+                    </div>
+
+                    <button class="primary-button">
+                        + Add Task
+                    </button>
+                </div>
+
+
+                <!-- STAT CARDS -->
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <div class="stat-icon blue">📚</div>
+
+                        <div>
+                            <span class="stat-label">Total Modules</span>
+                            <h3>06</h3>
+                        </div>
+                    </article>
+
+
+                    <article class="stat-card">
+                        <div class="stat-icon green">✅</div>
+
+                        <div>
+                            <span class="stat-label">Completed Tasks</span>
+                            <h3>12</h3>
+                        </div>
+                    </article>
+
+
+                    <article class="stat-card">
+                        <div class="stat-icon orange">📝</div>
+
+                        <div>
+                            <span class="stat-label">Upcoming Exams</span>
+                            <h3>03</h3>
+                        </div>
+                    </article>
+
+
+                    <article class="stat-card">
+                        <div class="stat-icon purple">📈</div>
+
+                        <div>
+                            <span class="stat-label">Overall Progress</span>
+                            <h3>78%</h3>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <!-- MAIN GRID -->
+                <div class="content-grid">
+
+                    <!-- PROGRESS -->
+                    <article class="card progress-card">
+
+                        <div class="card-header">
+                            <div>
+                                <p class="section-label">PERFORMANCE</p>
+                                <h3>Study Progress</h3>
+                            </div>
+
+                            <button class="more-button">•••</button>
+                        </div>
+
+                        <div class="progress-content">
+
+                            <div class="progress-circle">
+                                <span>78%</span>
+                            </div>
+
+                            <div class="progress-info">
+
+                                <h4>You're doing great! 🔥</h4>
+
+                                <p>
+                                    Keep going. You're getting closer
+                                    to completing your study goals.
+                                </p>
+
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- UPCOMING EXAMS -->
+                    <article class="card">
+
+                        <div class="card-header">
+                            <div>
+                                <p class="section-label">SCHEDULE</p>
+                                <h3>Upcoming Exams</h3>
+                            </div>
+
+                            <a href="#" class="view-all">View all</a>
+                        </div>
+
+
+                        <div class="exam-list">
+
+                            <div class="exam-item">
+
+                                <div class="exam-icon">PHP</div>
+
+                                <div class="exam-info">
+                                    <strong>PHP Programming</strong>
+                                    <span>Tomorrow • 09:00</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="exam-item">
+
+                                <div class="exam-icon">JS</div>
+
+                                <div class="exam-info">
+                                    <strong>JavaScript</strong>
+                                    <span>Friday • 14:00</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="exam-item">
+
+                                <div class="exam-icon">DB</div>
+
+                                <div class="exam-info">
+                                    <strong>Database</strong>
+                                    <span>Next Monday • 10:00</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- RECENT TASKS -->
+                <article class="card tasks-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <p class="section-label">PRODUCTIVITY</p>
+                            <h3>Recent Tasks</h3>
+                        </div>
+
+                        <a href="#" class="view-all">View all</a>
+
+                    </div>
+
+
+                    <div class="task-list">
+
+                        <div class="task-item">
+
+                            <label>
+                                <input type="checkbox">
+                                <span>Review JavaScript DOM</span>
+                            </label>
+
+                            <span class="task-tag blue-tag">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+
+                        <div class="task-item">
+
+                            <label>
+                                <input type="checkbox" checked>
+                                <span class="completed">
+                                    Practice SQL JOINs
+                                </span>
+                            </label>
+
+                            <span class="task-tag green-tag">
+                                Database
+                            </span>
+
+                        </div>
+
+
+                        <div class="task-item">
+
+                            <label>
+                                <input type="checkbox">
+                                <span>Build StudentHub UI</span>
+                            </label>
+
+                            <span class="task-tag purple-tag">
+                                Project
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
 
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
