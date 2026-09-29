@@ -800,4 +800,49 @@ a {
         gap: 10px;
     }
 }
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode {
+    --background: #0f172a;
+    --surface: #1e293b;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+
+    --border: #334155;
+}
+
+body.dark-mode .topbar {
+    background: #1e293b;
+}
+
+body.dark-mode .icon-button {
+    background: #273449;
+    border-color: #334155;
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .card {
+    box-shadow: none;
+}
+
+body.dark-mode .progress-circle {
+    background:
+        radial-gradient(
+            circle,
+            #1e293b 58%,
+            transparent 59%
+        ),
+        conic-gradient(
+            var(--primary) 78%,
+            #334155 78%
+        );
+}
+
+body.dark-mode .progress-bar {
+    background: #334155;
+}
 
