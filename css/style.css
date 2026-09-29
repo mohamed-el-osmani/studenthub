@@ -841,6 +841,18 @@ body.dark-mode .progress-circle {
             #334155 78%
         );
 }
+/* =========================================
+   MOBILE SIDEBAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+    }
+
+}
 
 body.dark-mode .progress-bar {
     background: #334155;
