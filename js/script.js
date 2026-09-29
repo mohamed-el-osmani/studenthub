@@ -33,3 +33,18 @@ function init() {
 }
 
 init();
+let darkMode=false;
+/* =========================================
+   4. DARK MODE
+========================================= */
+
+function toggleDarkMode() {
+
+    darkMode = !darkMode;
+
+    document.body.classList.toggle("dark-mode");
+
+}
+
+themeToggle.addEventListener("click", toggleDarkMode);
+
