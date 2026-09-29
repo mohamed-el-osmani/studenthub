@@ -43,6 +43,17 @@ function toggleDarkMode() {
     darkMode = !darkMode;
 
     document.body.classList.toggle("dark-mode");
+/* =========================================
+   5. MOBILE SIDEBAR
+========================================= */
+
+function toggleSidebar() {
+
+    sidebar.classList.toggle("mobile-open");
+
+}
+
+mobileMenu.addEventListener("click", toggleSidebar);
 
 }
 
